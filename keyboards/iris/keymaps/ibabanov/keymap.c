@@ -20,10 +20,8 @@ extern keymap_config_t keymap_config;
 #define KC_NORM TO(_QWERTY)
 
 #define KC__LSFT OSM(MOD_LSFT)
-#define KC__A_C CTL_T(KC_A)
-#define KC__S_C CTL_T(KC_SCLN)
-#define KC__SPC_C CTL_T(KC_SPC)
-#define KC__SPC_G GUI_T(KC_SPC)
+#define KC__A_C GUI_T(KC_A)
+#define KC__S_C GUI_T(KC_SCLN)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -37,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
      LALT, Z  , X  , C  , V  , B  ,GAME,     UNDS, N  , M  ,COMM,DOT ,SLSH,RALT,
   //`----+----+----+----+----+----+----/    \----+----+----+----+----+----+----'
-                       RASE,LOWR,LGUI,         SPC ,_LSFT,LGUI
+                       RASE,LOWR,LCTL,         SPC ,_LSFT,LGUI
   //                  `----+----+----'        `----+----+----'
   ),
 
@@ -63,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
          ,    ,LEFT,DOWN,UP  ,RGHT,               LEFT,DOWN,UP  ,RGHT,    ,    ,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
-         ,    ,    ,MPRV,MNXT,MPLY,    ,         ,MPLY,VOLD,VOLU,    ,    ,RST ,
+         ,    ,    ,MPRV,MNXT,MPLY,    ,         ,PAUS,VOLD,VOLU,    ,    ,RST ,
   //`----+----+----+----+----+----+----/    \----+----+----+----+----+----+----'
                            ,    ,    ,             ,    ,
   //                  `----+----+----'        `----+----+----'
@@ -77,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
      ESC ,LSFT, A  , S  , D  , F  ,                H  , J  , K  , L  , S  ,ENT ,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
-      I  , B  , Z  , X  , C  , V  ,NORM,     NORM, N  , M  ,COMM,DOT ,SLSH,RALT,
+      I  , B  , Z  , X  , C  , V  ,NORM,     NORM, N  , M  ,LEFT,DOWN, UP ,RGHT,
   //`----+----+----+----+----+----+----/    \----+----+----+----+----+----+----'
                        TAB ,LGUI,SPC ,          F5 , F6 , F9
   //                  `----+----+----'        `----+----+----'
