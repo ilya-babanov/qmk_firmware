@@ -7,7 +7,8 @@ extern keymap_config_t keymap_config;
 #define _QWERTY 0
 #define _LOWER 1
 #define _RAISE 2
-#define _GAME 3
+#define _NUMB 3
+#define _GAME 4
 
 #define KC_ KC_TRNS
 #define _______ KC_TRNS
@@ -16,6 +17,7 @@ extern keymap_config_t keymap_config;
 
 #define KC_LOWR MO(_LOWER)
 #define KC_RASE MO(_RAISE)
+#define KC_NUMB MO(_NUMB)
 #define KC_GAME TO(_GAME)
 #define KC_NORM TO(_QWERTY)
 
@@ -35,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
      LALT, Z  , X  , C  , V  , B  ,GAME,     UNDS, N  , M  ,COMM,DOT ,SLSH,RALT,
   //`----+----+----+----+----+----+----/    \----+----+----+----+----+----+----'
-                       RASE,LOWR,LCTL,         SPC ,_LSFT,LGUI
+                       RASE,LOWR,LCTL,         SPC ,_LSFT,NUMB
   //                  `----+----+----'        `----+----+----'
   ),
 
@@ -59,11 +61,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
          , F1 , F2 , F3 , F4 , F5 ,                F6 , F7 , F8 , F9 ,F10 ,F11 ,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-         ,    ,LEFT,DOWN,UP  ,RGHT,               LEFT,DOWN,UP  ,RGHT,    ,    ,
+         ,    ,LEFT,DOWN,UP  ,RGHT,               LEFT,DOWN, UP ,RGHT,    ,    ,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
          ,    ,    ,MPRV,MNXT,MPLY,    ,         ,PAUS,VOLD,VOLU,    ,    ,RST ,
   //`----+----+----+----+----+----+----/    \----+----+----+----+----+----+----'
                            ,    ,    ,             ,    ,
+  //                  `----+----+----'        `----+----+----'
+  ),
+
+  [_NUMB] = LAYOUT_kc(
+  //,----+----+----+----+----+----.              ,----+----+----+----+----+----.
+         ,    ,    ,    ,    ,    ,                   ,    ,    ,    ,    ,    ,
+  //|----+----+----+----+----+----|              |----+----+----+----+----+----|
+         ,    ,  7 ,  8 ,  9 ,    ,                   ,    ,    ,    ,    ,    ,
+  //|----+----+----+----+----+----|              |----+----+----+----+----+----|
+         ,    ,  4 ,  5 ,  6 ,    ,                   ,    ,    , UP ,    ,    ,
+  //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
+         ,    ,  1 ,  2 ,  3 ,    ,    ,         ,    ,    ,LEFT,DOWN,RGHT,    ,
+  //`----+----+----+----+----+----+----/    \----+----+----+----+----+----+----'
+                         0 ,  0 ,  0 ,             ,    ,
   //                  `----+----+----'        `----+----+----'
   ),
 
