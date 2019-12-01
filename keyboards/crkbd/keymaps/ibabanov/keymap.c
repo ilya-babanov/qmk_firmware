@@ -35,8 +35,8 @@ extern keymap_config_t keymap_config;
 #define KC_GUMB MO(_GUMB)
 
 #define KC__LSFT OSM(MOD_LSFT)
-#define KC__A_C GUI_T(KC_A)
-#define KC__S_C GUI_T(KC_SCLN)
+#define KC__A_C CTL_T(KC_A)
+#define KC__S_C CTL_T(KC_SCLN)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_kc(
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----+              |----+----+----+----+----+----|
      LALT, Z  , X  , C  , V  , B  ,                N  , M  ,COMM,DOT ,SLSH,RALT,
   //`----+----+----+----+----+----+---/      \---+----+----+----+----+----+----'
-                       NUMB,LOWR,LCTL,         SPC ,_LSFT,RASE
+                       NUMB,LOWR,LGUI,         SPC ,_LSFT,RASE
   //                  `----+----+----'        `----+----+----'
   ),
 
